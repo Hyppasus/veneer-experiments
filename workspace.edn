@@ -1,0 +1,15 @@
+{:assets 
+{}
+ :current-tab 3
+ :file "GlitchPhasor-v26-feedback-modulation.veneer.veneer"
+ :manifest 
+{:dependencies 
+{}
+ :description "An experimental glitchy oscillator"
+ :export-format "[\"SuperCollider\" \"macOS\" \"Intel 64-bit\" \"10.14.6\"]"
+ :license "https://www.eclipse.org/legal/epl-v10.html"
+ :name "verneer-experiments"
+ :url "https://github.com/Hyppasus/verneer-experiments"
+ :version "0.1"}
+ :name "Verneer-experimental-aol"
+ :tabs ("tabs/GlitchPhasor.86nc43lyuhqnyj.edn" "tabs/modulation-case.saz9wod0lwrui2.edn" "tabs/FeedbackOscillator.cmdcf51ke7fa53o.edn" "tabs/Feedback-Osc-example.x4cd3yb3fcaebn6.edn")}

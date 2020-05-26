@@ -1,0 +1,71 @@
+{:identifier "Feedback-Osc-example"
+ :identity "x4cd3yb3fcaebn6"
+ :patch
+{:cables
+{["8kjqip6enjvv1oc" 0] [:fixed "ekx85c1qgcmo3pw" 0]
+ ["e4sbw954v0b31ud" 0] [:fixed "ps4avw3qan6c375" 0]
+ ["e4sbw954v0b31ud" 1] [:fixed "6basqf7kqa8aapu" 0]
+ ["e4sbw954v0b31ud" 2] [:fixed "9h1agrco82ntr0j" 0]
+ ["e4sbw954v0b31ud" 3] [:fixed "98fcb3dyj4it6s2" 0]
+ ["e4sbw954v0b31ud" 4] [:fixed "2wx54x7zk4olfkv" 0]
+ ["ekx85c1qgcmo3pw" 0] [:fixed "e4sbw954v0b31ud" 0]
+ ["ekx85c1qgcmo3pw" 1] [:fixed "1g9dhym51jenptc" 0]}
+ :nodes
+{"1g9dhym51jenptc" 
+{:color 2
+ :inputs []
+ :label "0 .o 0.5"
+ :outputs [""]
+ :parsed [:widget "-bby6yd" 0.29500000000000004 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "0.5"]}]
+ :pos [93 -158]}
+ "2wx54x7zk4olfkv" 
+{:color 3
+ :inputs []
+ :label "0 .o 0.1"
+ :outputs [""]
+ :parsed [:widget "ha3cmk" 0 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "0.1"]}]
+ :pos [-32 -162]}
+ "6basqf7kqa8aapu" 
+{:inputs []
+ :label "0 .o 1"
+ :outputs [""]
+ :parsed [:widget "a79oox" 0.805 {:type :dial, :skin :circular, :min [:float "0"], :max [:float "1"]}]
+ :pos [-451 -167]}
+ "8kjqip6enjvv1oc" 
+{:inputs ["sig"]
+ :label "o)"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [229 35]}
+ "98fcb3dyj4it6s2" 
+{:inputs []
+ :label "-1 .o 1.0"
+ :outputs [""]
+ :parsed [:widget "-w064gs" 0 {:type :dial, :skin :circular, :min [:float "-1"], :max [:float "1.0"]}]
+ :pos [-165 -167]}
+ "9h1agrco82ntr0j" 
+{:inputs []
+ :label "0.1 .o 10000"
+ :outputs [""]
+ :parsed [:widget "-yb0pae" 0.785 {:type :dial, :skin :circular, :min [:float "0.1"], :max [:float "10000"]}]
+ :pos [-327 -167]}
+ "e4sbw954v0b31ud" 
+{:inputs ["freq" "fb" "scaler" "threshold" "delay"]
+ :label "FeedbackOscillator($freq $fb $scaler $threshold $delay)"
+ :outputs [""]
+ :parsed [:fn "FeedbackOscillator" [:tuple [:free-var "freq"] [:free-var "fb"] [:free-var "scaler"] [:free-var "threshold"] [:free-var "delay"]]]
+ :pos [-265 33]}
+ "ekx85c1qgcmo3pw" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [112 34]}
+ "ps4avw3qan6c375" 
+{:inputs []
+ :label "20 -x- 22000"
+ :outputs [""]
+ :parsed [:widget "-qpkov5" 0.11697052435957175 {:type :slider, :limits [[:float "20"] [:float "22000"]], :render [:limits], :size 3, :orientation :vertical, :curve :exponential}]
+ :pos [-596 -57]}}
+ :scale 1
+ :scroll [0 0]}}

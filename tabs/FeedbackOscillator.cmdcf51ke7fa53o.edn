@@ -1,0 +1,201 @@
+{:documentation "Glitch Oscillator with Feedback"
+ :draft-argument "200 0.5 100 0 0.01"
+ :export 
+{:arguments 
+{"delay" 
+{:signal-type "audio"}
+ "fb" 
+{:signal-type "audio"}
+ "freq" 
+{:signal-type "audio"}
+ "scaler" 
+{:signal-type "audio"}
+ "threshold" 
+{:signal-type "audio"}}}
+ :identifier "FeedbackOscillator"
+ :identity "cmdcf51ke7fa53o"
+ :patch
+{:cables
+{["1ljbo5h5jjl94tg" 0] [:fixed "3oqzg47njzi08fl" 0]
+ ["2aq9pqmc4blsxvj" 0] [:fixed "87y4g2q8qcv1ftb" 0]
+ ["2aq9pqmc4blsxvj" 1] [:fixed "tn5u2qdcckzhr3n" 0]
+ ["30zob41ts9e8oar" 0] [:fixed "6s28085qn9libk8" 0]
+ ["3oqzg47njzi08fl" 0] [:fixed "v6v5b61eo89955" 0]
+ ["3oqzg47njzi08fl" 1] [:fixed "2aq9pqmc4blsxvj" 0]
+ ["3txah8dq81weu4" 0] [:fixed "giuds9edv9gcde8" 0]
+ ["6s28085qn9libk8" 0] [:fixed "1ljbo5h5jjl94tg" 0]
+ ["6s28085qn9libk8" 1] [:fixed "ndnb68tj01h331p" 0]
+ ["6s28085qn9libk8" 2] [:fixed "1p7iylyq3cr181l" 0]
+ ["6s28085qn9libk8" 3] [:fixed "x10geo2meazs9xe" 0]
+ ["78x9p2t32mp78sl" 0] [:fixed "c0de9sjaaf85jf2" 0]
+ ["94w9xbfl12hf9i" 0] [:fixed "buny4hlsbucvu4z" 0]
+ ["94w9xbfl12hf9i" 1] [:fixed "1u3ir49admq6qx" 1]
+ ["azwgwd7y1l8ruk3" 0] [:fixed "hq8agco5ngoaz2" 0]
+ ["azwgwd7y1l8ruk3" 1] [:fixed "94w9xbfl12hf9i" 0]
+ ["buny4hlsbucvu4z" 0] [:fixed "1ljbo5h5jjl94tg" 0]
+ ["c0de9sjaaf85jf2" 0] [:fixed "azwgwd7y1l8ruk3" 0]
+ ["c0de9sjaaf85jf2" 1] [:fixed "1u3ir49admq6qx" 2]
+ ["giuds9edv9gcde8" 0] [:fixed "78x9p2t32mp78sl" 0]
+ ["hq8agco5ngoaz2" 0] [:fixed "1u3ir49admq6qx" 0]
+ ["k76jpt4o4f1xld" 1] [:fixed "94w9xbfl12hf9i" 0]
+ ["k76jpt4o4f1xld" 2] [:fixed "78x9p2t32mp78sl" 0]
+ ["ndnb68tj01h331p" 0] [:fixed "1u3ir49admq6qx" 4]
+ ["tn5u2qdcckzhr3n" 0] [:fixed "1u3ir49admq6qx" 3]
+ ["tn5u2qdcckzhr3n" 1] [:fixed "1ljbo5h5jjl94tg" 0]
+ ["tt355i5z63s797o" 0] [:fixed "30zob41ts9e8oar" 0]
+ ["v6v5b61eo89955" 0] [:fixed "3txah8dq81weu4" 0]
+ ["x10geo2meazs9xe" 0] [:fixed "k76jpt4o4f1xld" 0]
+ ["x10geo2meazs9xe" 1] [:fixed "bnny45xe1if52ev" 0]}
+ :nodes
+{"1ljbo5h5jjl94tg" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [92 221]}
+ "1p7iylyq3cr181l" 
+{:color 3
+ :inputs []
+ :label "#9600"
+ :outputs [""]
+ :parsed [:invariant "9600"]
+ :pos [406 -129]}
+ "1u3ir49admq6qx" 
+{:inputs []
+ :label "(freq fb scaler threshold delay) = arg"
+ :outputs ["freq" "fb" "scaler" "threshold" "delay"]
+ :parsed "arg"
+ :pos [-804 -108]}
+ "2aq9pqmc4blsxvj" 
+{:inputs ["value" "sign"]
+ :label "Math:Copy-Sign($value $sign)"
+ :outputs [""]
+ :parsed [:fn "Math:Copy-Sign" [:tuple [:free-var "value"] [:free-var "sign"]]]
+ :pos [-132 103]}
+ "30zob41ts9e8oar" 
+{:color 3
+ :inputs ["sig"]
+ :label "Filter:DC($sig)"
+ :outputs [""]
+ :parsed [:fn "Filter:DC" [:tuple [:free-var "sig"]]]
+ :pos [684 48]}
+ "3oqzg47njzi08fl" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-32 221]}
+ "3txah8dq81weu4" 
+{:inputs ["a"]
+ :label "* 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "2"]]
+ :pos [-252 220]}
+ "6s28085qn9libk8" 
+{:color 3
+ :inputs ["sig" "delay-time" "buffer-size" "feedback-fn"]
+ :label "Delay:Dynamic-Delay($sig $delay-time $buffer-size $feedback-fn)"
+ :outputs [""]
+ :parsed [:fn "Delay:Dynamic-Delay" [:tuple [:free-var "sig"] [:free-var "delay-time"] [:free-var "buffer-size"] [:free-var "feedback-fn"]]]
+ :pos [504 49]}
+ "78x9p2t32mp78sl" 
+{:color 4
+ :inputs ["a"]
+ :label "Abs($a)"
+ :outputs [""]
+ :parsed [:fn "Abs" [:tuple [:free-var "a"]]]
+ :pos [-114 -120]}
+ "87y4g2q8qcv1ftb" 
+{:inputs []
+ :label "1"
+ :outputs [""]
+ :parsed [:float "1"]
+ :pos [-291 100]}
+ "94w9xbfl12hf9i" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-349 -185]}
+ "azwgwd7y1l8ruk3" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "+"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "+" [:free-var "b"] [:free-var "more..."]]
+ :pos [-323 -120]}
+ "bnny45xe1if52ev" 
+{:color 2
+ :inputs ["x"]
+ :label "Math:Tanh($x)"
+ :outputs [""]
+ :parsed [:fn "Math:Tanh" [:tuple [:free-var "x"]]]
+ :pos [575 -330]}
+ "buny4hlsbucvu4z" 
+{:color 4
+ :inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [-426 -184]}
+ "c0de9sjaaf85jf2" 
+{:color 4
+ :inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [-226 -121]}
+ "giuds9edv9gcde8" 
+{:inputs ["freq"]
+ :label "Gen:Phasor($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
+ :pos [-388 220]}
+ "hq8agco5ngoaz2" 
+{:color 4
+ :inputs ["freq"]
+ :label "Gen:Sin($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Sin" [:tuple [:free-var "freq"]]]
+ :pos [-405 -120]}
+ "k76jpt4o4f1xld" 
+{:color 2
+ :inputs ["sig" "freq" "bw"]
+ :label "Filter:Resonator($sig $freq $bw)"
+ :outputs [""]
+ :parsed [:fn "Filter:Resonator" [:tuple [:free-var "sig"] [:free-var "freq"] [:free-var "bw"]]]
+ :pos [473 -209]}
+ "ndnb68tj01h331p" 
+{:color 3
+ :inputs ["b"]
+ :label "Max(0.05 $b)"
+ :outputs [""]
+ :parsed [:fn "Max" [:tuple [:number-widget :float "-ufm6m0" "0.00116" ""] [:free-var "b"]]]
+ :pos [315 -22]}
+ "tn5u2qdcckzhr3n" 
+{:inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [-162 15]}
+ "tt355i5z63s797o" 
+{:inputs ["sig"]
+ :label "o)"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [784 45]}
+ "v6v5b61eo89955" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [-135 220]}
+ "x10geo2meazs9xe" 
+{:color 2
+ :ephemeral-inputs #{"fns2" "fns"}
+ :inputs ["fns2" "fns" "fns..."]
+ :label "Function:Pipeline($fns...)"
+ :outputs [""]
+ :parsed [:fn "Function:Pipeline" [:tuple [:free-var "fns2"] [:free-var "fns"] [:free-var "fns..."]]]
+ :pos [644 -212]}}}}

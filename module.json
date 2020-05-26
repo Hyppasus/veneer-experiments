@@ -1,0 +1,9 @@
+{
+  "dependencies": {},
+  "description": "An experimental glitchy oscillator",
+  "export-format": "[\"SuperCollider\" \"macOS\" \"Intel 64-bit\" \"10.14.6\"]",
+  "license": "https://www.eclipse.org/legal/epl-v10.html",
+  "name": "verneer-experiments",
+  "url": "https://github.com/Hyppasus/verneer-experiments",
+  "version": "0.1"
+}

@@ -1,0 +1,89 @@
+{:draft-argument "80 0"
+ :export 
+{}
+ :identifier "GlitchPhasor"
+ :identity "86nc43lyuhqnyj"
+ :patch
+{:cables
+{["6uu21fd1sf3336h" 0] [:fixed "si0yjeg431hz996" 0]
+ ["c8ldj50mfl34v7y" 0] [:fixed "5fevgzzx36d0b96" 1]
+ ["c8ldj50mfl34v7y" 1] [:fixed "si0yjeg431hz996" 0]
+ ["cnob8x2c9etrxqi" 0] [:fixed "5fevgzzx36d0b96" 0]
+ ["d119ko66912bwft" 0] [:fixed "9xgri1gxmxr2fpk" 0]
+ ["d119ko66912bwft" 1] [:fixed "c8ldj50mfl34v7y" 0]
+ ["dzzh088zffpoxt9" 0] [:fixed "cnob8x2c9etrxqi" 0]
+ ["r9p51de234mj8sl" 0] [:fixed "v2p92jcsuwdcvpo" 0]
+ ["r9p51de234mj8sl" 1] [:fixed "d119ko66912bwft" 0]
+ ["si0yjeg431hz996" 0] [:fixed "r9p51de234mj8sl" 0]
+ ["v2p92jcsuwdcvpo" 0] [:fixed "dzzh088zffpoxt9" 0]}
+ :nodes
+{"5fevgzzx36d0b96" 
+{:inputs []
+ :label "(freq threshold) = arg"
+ :outputs ["freq" "threshold"]
+ :parsed "arg"
+ :pos [-541 -209]}
+ "6uu21fd1sf3336h" 
+{:inputs ["sig"]
+ :label "o)"
+ :outputs ["thru"]
+ :parsed [:playback [:free-var "sig"]]
+ :pos [419 -125]}
+ "9xgri1gxmxr2fpk" 
+{:inputs []
+ :label "1"
+ :outputs [""]
+ :parsed [:float "1"]
+ :pos [-143 -226]
+ :selected true}
+ "c8ldj50mfl34v7y" 
+{:inputs ["a" "b" "more..."]
+ :label "-"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:free-var "b"] [:free-var "more..."]]
+ :pos [-14 -311]
+ :selected true}
+ "cnob8x2c9etrxqi" 
+{:inputs ["freq"]
+ :label "Gen:Phasor($freq)"
+ :outputs [""]
+ :parsed [:fn "Gen:Phasor" [:tuple [:free-var "freq"]]]
+ :pos [-240 -106]
+ :selected true}
+ "d119ko66912bwft" 
+{:inputs ["value" "sign"]
+ :label "Math:Copy-Sign($value $sign)"
+ :outputs [""]
+ :parsed [:fn "Math:Copy-Sign" [:tuple [:free-var "value"] [:free-var "sign"]]]
+ :pos [16 -223]
+ :selected true}
+ "dzzh088zffpoxt9" 
+{:inputs ["a"]
+ :label "* 2"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:float "2"]]
+ :pos [-104 -106]
+ :selected true}
+ "r9p51de234mj8sl" 
+{:inputs ["a" "b" "more..."]
+ :label "*"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "*" [:free-var "b"] [:free-var "more..."]]
+ :pos [116 -105]
+ :selected true}
+ "si0yjeg431hz996" 
+{:inputs ["sig~"]
+ :label "z-1($sig~)"
+ :outputs [""]
+ :parsed [:fn "z-1" [:tuple [:free-var "sig~"]]]
+ :pos [240 -120]
+ :selected true}
+ "v2p92jcsuwdcvpo" 
+{:inputs ["a"]
+ :label "- 1"
+ :outputs [""]
+ :parsed [:infix [:free-var "a"] "-" [:float "1"]]
+ :pos [13 -106]
+ :selected true}}
+ :scale 1
+ :scroll [0 0]}}
